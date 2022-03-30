@@ -4,9 +4,7 @@ import { document } from "../utils/dynamodbClient";
 export const handler: APIGatewayProxyHandler = async (_event) => {  
   const users = await document.scan({
     TableName: "users",     
-  }).promise();
-
-  console.log(users);
+  }).promise();  
 
   return {
     statusCode: 200,

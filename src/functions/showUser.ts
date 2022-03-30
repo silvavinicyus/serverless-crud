@@ -20,10 +20,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
         message: "There is no user with the given id"
       })
     }
-  }
-
-  console.log("USer aqui porra");
-  console.log(user);
+  }    
   
   return {
     statusCode: 200,

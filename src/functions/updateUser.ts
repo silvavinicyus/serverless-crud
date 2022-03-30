@@ -4,9 +4,7 @@ import { document } from "../utils/dynamodbClient";
 export const handler: APIGatewayProxyHandler = async (event) => {
   const id = event.pathParameters.id;
 
-  const { name } = JSON.parse(event.body);  
-
-  console.log({id, name})
+  const { name } = JSON.parse(event.body);    
 
   await document.update({
     TableName: "users",
